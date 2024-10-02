@@ -41,6 +41,10 @@ body main p {
 body main #section-biografia, body main .section-discografia h3, body main .section-discografia h4, body main .section-discografia p, body main .section-titulo, body main .section-titulo + p, body main #section-tour-mapa h3 {
   color: #4b356d;
 }
+body main #section-cita {
+  color: #c2bacf;
+  background-color: #644791;
+}
 body main .section-discografia {
   padding-bottom: 3em;
 }
@@ -104,7 +108,7 @@ body main #form-container {
 }
 body main #form-container #form-div {
   background-color: rgba(101, 71, 145, 0.3019607843);
-  padding: 3em;
+  padding: 2em;
   margin: 0 auto;
 }
 body main #form-container #form-div label {
@@ -113,16 +117,20 @@ body main #form-container #form-div label {
 body main #form-container #form-div label a {
   color: #1f014d;
 }
-body main #btn-form {
-  width: 100%;
-  border: rgba(251, 251, 251, 0) solid 1px;
+body main #form-container #form-div input, body main #form-container #form-div textarea {
+  border: 5px solid rgba(0, 0, 0, 0);
+}
+body main #form-container #form-div #btn-form {
   cursor: pointer;
   background-color: #4b356d;
   color: #c2bacf;
   padding: 1.2em;
   margin-top: 4em;
 }
-body main footer {
+body main #form-container form {
+  padding-bottom: 1.8em;
+}
+body footer {
   color: #383838;
   background-color: #dbdbdb;
 }
@@ -150,124 +158,132 @@ body main footer {
   body main {
     padding: 0 10em;
   }
-  body #section-introduccion {
+  body main #section-introduccion {
     display: flex;
     justify-content: space-between;
-    margin: 3em 1em 0 2em;
     font-size: 1.3em;
+    padding-bottom: 2em;
   }
-  body #section-introduccion #text-introduccion {
-    color: #4b356d;
+  body main #section-introduccion #text-introduccion {
     width: 100%;
     margin-right: 1em;
-    padding: 3em 3em 0 2em;
   }
-  body #section-introduccion #text-introduccion h2 {
+  body main #section-introduccion #text-introduccion h2 {
+    margin: 2em 1em 0 0em;
     font-size: 2.5em;
     padding-bottom: 1em;
   }
-  body #section-introduccion #text-introduccion p {
+  body main #section-introduccion #text-introduccion p {
     text-align: justify;
     font-size: 1em;
   }
-  body #section-introduccion img {
-    width: 90%;
+  body main #section-introduccion img {
+    margin: 5em 1em 0 2em;
+    width: 100%;
     padding-bottom: 2em;
   }
-  body #section-cita {
+  body main #section-cita {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #c2bacf;
-    background-color: #644791;
     font-size: 1.2em;
   }
-  body #section-cita img {
-    width: 80%;
+  body main #section-cita img {
+    width: 100%;
+    padding: 1em;
   }
-  body #section-cita blockquote {
+  body main #section-cita blockquote {
     font-size: 1.2em;
     text-align: center;
     font-style: italic;
     padding: 1em 2em;
     width: 90%;
   }
-  body #section-biografia {
+  body main #section-biografia {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5em;
+    gap: 3em;
     justify-content: space-between;
     margin: 0 1em;
     padding: 2em;
   }
-  body #section-biografia p {
-    margin: 1em 3em;
+  body main #section-biografia p {
+    margin: 1em 1em;
     text-align: justify;
     font-size: 1.25em;
   }
-  body #section-titulo-discografia {
+  body main #section-titulo-discografia {
     margin: 2em;
   }
-  body .section-discografia div + div {
+  body main .section-discografia div + div {
     margin: 4em 2em 0em 2em;
   }
-  body .section-discografia h4 {
+  body main .section-discografia h4 {
     text-align: center;
     padding: 1em 0em 2em 0;
     font-size: 1.7em;
   }
-  body .section-discografia .list-canciones ol {
+  body main .section-discografia .list-canciones ol {
     font-size: 1.2em;
   }
-  body .section-discografia .list-canciones ol li {
+  body main .section-discografia .list-canciones ol li {
     padding: 1em;
     width: 100vh;
   }
-  body #section-tour-mapa h2 {
+  body main #section-tour-mapa h2 {
     padding-bottom: 0.7em;
   }
-  body #section-tour-mapa hr {
+  body main #section-tour-mapa hr {
     margin-top: 5em;
   }
-  body #section-tour-mapa h3 {
+  body main #section-tour-mapa h3 {
     font-size: 1.7em;
     padding-top: 2em;
   }
-  body #section-tour-mapa #grid-tour {
+  body main #section-tour-mapa #grid-tour {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
     padding: 2em 2em;
     margin: 2em;
   }
-  body #section-tour-mapa #grid-tour iframe {
+  body main #section-tour-mapa #grid-tour iframe {
     border: none;
     width: 100%;
     height: 100%;
   }
-  body #section-tour-mapa #grid-tour img {
+  body main #section-tour-mapa #grid-tour img {
     width: 100%;
     height: 100%;
   }
-  body #form-div {
+  body #main-contacto {
+    padding-bottom: 3em;
+  }
+  body #main-contacto h2 {
+    font-size: 2em;
+    padding: 1em 0;
+  }
+  body #main-contacto p {
+    padding-bottom: 1em;
+  }
+  body #main-contacto #form-div {
     width: 100vh;
   }
-  body #form-div .form-datos {
-    color: #383838;
-    border-radius: 0;
-    line-height: 2em;
-    background-color: white;
+  body #main-contacto #form-div p {
+    font-size: 1em;
+  }
+  body #main-contacto #form-div .form-datos {
+    line-height: 150%;
     padding: 0.2em;
     width: 100%;
-    border: 5px solid rgba(0, 0, 0, 0);
   }
-  body #form-div textarea {
+  body #main-contacto #form-div .form-datos textarea {
     width: 100%;
-    height: 200%;
     line-height: 150%;
   }
-  body #form-div #btn-form {
-    font-size: 1.2em;
+  body #main-contacto #form-div #btn-form {
+    width: 100%;
+    font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
@@ -317,8 +333,6 @@ body main footer {
   body #section-cita {
     display: flex;
     flex-direction: column;
-    color: #c2bacf;
-    background-color: #644791;
   }
   body #section-cita img {
     width: 30%;
@@ -346,17 +360,19 @@ body main footer {
     font-size: 1.4em;
   }
   body #section-titulo-discografia {
-    margin: 2em;
+    margin-top: 2em;
     text-align: center;
+    font-size: 2.5em;
   }
   body .section-discografia {
     margin: 2em;
     padding: 2em;
   }
   body .section-discografia h3 {
-    padding: 2em 0;
+    padding: 2em 0 1em 0;
   }
   body .section-discografia h4 {
+    padding-top: 2em;
     text-align: center;
     padding-bottom: 2em;
     font-size: 1.5em;
@@ -376,7 +392,7 @@ body main footer {
     padding-bottom: 3em;
   }
   body #section-tour-mapa div:nth-child(1) h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     padding-bottom: 0.8em;
   }
   body #section-tour-mapa h3 {
@@ -399,25 +415,180 @@ body main footer {
     width: 100%;
     height: 100%;
   }
-  body #form-div #btn-form {
+  body #main-contacto h2, body #main-contacto p {
+    text-align: center;
+  }
+  body #main-contacto h2 {
+    font-size: 1.7em;
+    padding-top: 2em;
+  }
+  body #main-contacto p {
     font-size: 1.2em;
+    padding: 0.5em;
   }
-  body .form-datos {
-    color: #3c3c3c;
-    border-radius: 0;
-    line-height: 1.8em;
-    background-color: white;
-    padding: 0.2em;
+  body #main-contacto #form-div textarea {
+    height: 10em;
+  }
+  body #main-contacto #form-div .form-datos {
     width: 100%;
-    border: 3px solid rgba(0, 0, 0, 0);
   }
-  body textarea {
+  body #main-contacto #form-div div {
+    font-size: 1em;
+    text-align: center;
+  }
+  body #main-contacto #form-div #btn-form {
+    font-size: 1.2em;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body header {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  body header h1 {
+    font-size: 2em;
+  }
+  body header nav {
+    margin-left: auto;
+  }
+  body header nav ul {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 1em;
+  }
+  body header nav ul li {
+    font-size: 1em;
+    text-align: right;
+  }
+  body main .section-titulo h2 {
+    color: #4b356d;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+  body main #section-introduccion {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0em;
+    padding: 2em;
+    text-align: justify;
+  }
+  body main #section-introduccion img {
     width: 100%;
-    height: 180%;
-    line-height: 140%;
   }
-  body #form-div {
-    width: 60vh;
+  body main #section-cita {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #section-cita img {
+    width: 100%;
+    padding: 1em;
+  }
+  body main #section-cita blockquote {
+    font-size: 1em;
+    text-align: justify;
+    font-style: italic;
+    padding: 2em;
+    width: 100%;
+  }
+  body main #section-biografia {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 2em;
+    font-size: 1em;
+  }
+  body main #section-titulo-discografia {
+    margin: 2em 0;
+    text-align: center;
+    font-size: 1.7em;
+  }
+  body main .section-discografia {
+    padding: 2em 0;
+  }
+  body main .section-discografia div + div {
+    margin: 2em 2em;
+  }
+  body main .section-discografia div + div p {
+    font-size: 1em;
+  }
+  body main .section-discografia h3 {
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+  body main .section-discografia img {
+    width: 100%;
+  }
+  body main .section-discografia h4 {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1em 0 2em 0;
+  }
+  body main .section-discografia .list-canciones ol {
+    font-size: 1em;
+    width: 100%;
+    margin-left: -2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .section-discografia .list-canciones ol li {
+    width: 100%;
+  }
+  body main #section-tour-mapa h2 {
+    font-size: 1.7em;
+    padding-bottom: 0.5em;
+  }
+  body main #section-tour-mapa h2, body main #section-tour-mapa p {
+    text-align: center;
+  }
+  body main #section-tour-mapa div h3 {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+  body main #section-tour-mapa #grid-tour iframe {
+    border: none;
+    width: 100%;
+    height: 30em;
+  }
+  body main #section-tour-mapa #grid-tour img {
+    width: 100%;
+    height: 20em;
+  }
+  body #main-contacto h2, body #main-contacto p {
+    text-align: center;
+  }
+  body #main-contacto h2 {
+    font-size: 1.7em;
+    padding-top: 2em;
+  }
+  body #main-contacto p {
+    font-size: 1.2em;
+    padding: 0.5em;
+  }
+  body #main-contacto #form-div textarea {
+    height: 10em;
+  }
+  body #main-contacto #form-div .form-datos {
+    width: 100%;
+  }
+  body #main-contacto #form-div div {
+    font-size: 1em;
+    text-align: center;
+  }
+  body #main-contacto #form-div #btn-form {
+    font-size: 1.2em;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+  body #main-contacto #form-div form {
+    padding-bottom: 1.8em;
   }
 }
 

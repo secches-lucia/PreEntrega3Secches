@@ -40,6 +40,10 @@ body {
         #section-biografia, .section-discografia h3, .section-discografia h4, .section-discografia p, .section-titulo, .section-titulo + p, #section-tour-mapa h3 {
             color: $text-color-1;
         }
+        #section-cita {
+            color: $text-color-3;
+            background-color: $background-color-2;
+        }
         .section-discografia {
             padding-bottom: 3em;
             img{
@@ -102,7 +106,7 @@ body {
         width: 100%;
         #form-div {
             background-color: #6547914d; // 30% de opacidad - $background-color-2
-            padding: 3em;
+            padding: 2em;
             margin: 0 auto;
             label {
                 color: $text-color-1;
@@ -110,23 +114,26 @@ body {
                     color: #1f014d;
                 }
             }
+            input, textarea {
+                border: 5px solid #00000000; // 0% de opacidad;
+            }                 
+            #btn-form {
+                cursor: pointer;
+                background-color: $background-color-1;
+                color: $text-color-3;
+                padding: 1.2em;
+                margin-top: 4em;
+            }
+        }
+        form {
+            padding-bottom: 1.8em;
         }
     }
+}
 
-    #btn-form {
-        width: 100%;
-        border: #fbfbfb00 solid 1px; // 0% de opacidad
-        cursor: pointer;
-        background-color: $background-color-1;
-        color: $text-color-3;
-        padding: 1.2em;
-        margin-top: 4em;
-    }
-
-    footer {
-        color: $footer-text-color;
-        background-color: $footer-background-color;
-        }
+footer {
+    color: $footer-text-color;
+    background-color: $footer-background-color;
 }
 
 // Responsive DESKTOP
@@ -155,20 +162,18 @@ body {
     }
     main {
         padding: 0 10em;
-    }
-
-    // Sobre Wolf
+        
+        // Sobre Wolf
         #section-introduccion{
             display: flex;
             justify-content: space-between;
-            margin: 3em 1em 0 2em;
             font-size: 1.3em;
+            padding-bottom: 2em;
             #text-introduccion {
-                color: #4b356d;
                 width: 100%;
                 margin-right: 1em;
-                padding: 3em 3em 0 2em;
                 h2 {
+                    margin: 2em 1em 0 0em;
                     font-size: 2.5em;
                     padding-bottom: 1em;
                 }
@@ -178,7 +183,8 @@ body {
                 }
             }
             img{
-                width: 90%;
+                margin: 5em 1em 0 2em;
+                width: 100%;
                 padding-bottom: 2em;
             }
         }
@@ -186,11 +192,10 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #c2bacf;
-            background-color: #644791;
             font-size: 1.2em;
             img {
-                width: 80%;
+                width: 100%;
+                padding: 1em;
             }
             blockquote {
                 font-size: 1.2em;
@@ -203,12 +208,12 @@ body {
         #section-biografia {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5em;
+            gap: 3em;
             justify-content: space-between;
             margin: 0 1em;
             padding: 2em;
             p{
-                margin: 1em 3em;
+                margin: 1em 1em;
                 text-align: justify;
                 font-size: 1.25em;
             }
@@ -223,18 +228,18 @@ body {
                 margin: 4em 2em 0em 2em;
             }
             h4 {
-            text-align: center;
-            padding: 1em 0em 2em 0;
-            font-size: 1.7em;
-        }
-        .list-canciones ol {
-            font-size: 1.2em;
-            li{
-                padding: 1em;
-                width: 100vh;
+                text-align: center;
+                padding: 1em 0em 2em 0;
+                font-size: 1.7em;
+            }
+            .list-canciones ol {
+                font-size: 1.2em;
+                li{
+                    padding: 1em;
+                    width: 100vh;
+                }
             }
         }
-    }
         #section-tour-mapa {
             h2 {
                 padding-bottom: 0.7em;
@@ -262,29 +267,39 @@ body {
                     height: 100%;
                 }
             }
+        }
     }
-    
-        //Contacto   
+
+    //Contacto
+    #main-contacto {
+        padding-bottom: 3em;
+        h2 {
+            font-size: 2em;
+            padding: 1em 0;
+        }
+        p {
+            padding-bottom: 1em;
+        }
         #form-div {
             width: 100vh;
+            p {
+                font-size:  1em;       
+            }
             .form-datos {
-                color: $text-color-4;
-                border-radius: 0;
-                line-height: 2em;
-                background-color: white;
+               line-height: 150%;
                 padding: 0.2em;
                 width:100%;
-                border: 5px solid #00000000; // 0% de opacidad
-            }
-            textarea {
-                width: 100%;
-                height: 200%;
-                line-height: 150%;
+                textarea {
+                    width: 100%;
+                    line-height: 150%;
+                }
             }
             #btn-form {
-                font-size: 1.2em;
+                width: 100%;
+                font-size: 1.3em;
             }
-        }  
+        }
+    }
 }
 
 // Responsive TABLET
@@ -339,8 +354,6 @@ body {
     #section-cita {
         display: flex;
         flex-direction: column;
-        color: $text-color-3;
-        background-color: $background-color-2;
         img {
             width: 30%;
             margin: 0 auto;
@@ -370,16 +383,18 @@ body {
 
     // Discografía
     #section-titulo-discografia {
-        margin: 2em;
+        margin-top: 2em;
         text-align: center;
+        font-size: 2.5em;
     }
     .section-discografia {
         margin: 2em;
         padding: 2em;
         h3 {
-            padding: 2em 0;
+            padding: 2em 0 1em 0;
         }
         h4 {
+            padding-top: 2em;
             text-align: center;
             padding-bottom: 2em;
             font-size: 1.5em;
@@ -404,7 +419,7 @@ body {
         div:nth-child(1) {
             padding-bottom: 3em;
             h2 {
-                font-size: 2em;
+                font-size: 2.5em;
                 padding-bottom: 0.8em;
             }
         }
@@ -431,27 +446,206 @@ body {
     }
 
     // Contacto
-    #form-div {
-        #btn-form {
+    #main-contacto {
+        h2, p {
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.7em;
+            padding-top: 2em;
+        }
+        p {
             font-size: 1.2em;
+            padding: 0.5em;
+        }
+        #form-div {
+            textarea {
+                height: 10em;
+            }
+            .form-datos {
+                width: 100%;
+            }
+            div {
+                font-size: 1em;
+                text-align: center;
+            }
+            #btn-form {
+                font-size: 1.2em;
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
         }
     } 
-    .form-datos {
-        color: #3c3c3c;
-        border-radius: 0;
-        line-height: 1.8em;
-        background-color: white;
-        padding: 0.2em;
-        width: 100%;
-        border: 3px solid rgba(0, 0, 0, 0);
+}
+
+// Responsive MOBILE
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        h1 {
+            font-size: 2em;
+        }
+        nav {
+            margin-left: auto;
+            ul {
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                gap: 1em;
+                li {
+                    font-size: 1em;
+                    text-align: right;
+                }
+            }
+        }
     }
-    textarea {
-        width: 100%;
-        height: 180%;
-        line-height: 140%;
+
+    main {
+        //Sobre Wolf
+        .section-titulo h2 {
+            color: $text-color-1;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 1em 0;
+        }
+        #section-introduccion {
+            display: flex;
+            flex-direction: column;
+            margin: 2em 0em;
+            padding: 2em;
+            text-align: justify;
+            img {
+                width: 100%;
+            }
+        }
+        #section-cita {
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+                padding: 1em;
+            }
+            blockquote {
+                font-size: 1em;
+                text-align: justify;
+                font-style: italic;
+                padding: 2em;
+                width: 100%;
+            }
+        }
+        #section-biografia {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            padding: 2em;
+            font-size: 1em;
+        }
+
+        //Discografía
+        #section-titulo-discografia {
+            margin: 2em 0;
+            text-align: center;
+            font-size: 1.7em;
+        }
+        .section-discografia{
+            padding: 2em 0;
+            div + div {
+                margin: 2em 2em;
+                p {
+                    font-size: 1em
+                };
+            }
+            h3 {
+                padding-bottom: 0.5em;
+                font-size: 1.5em;
+            }
+            img {
+                width: 100%;
+            }
+            h4 {
+                text-align: center;
+                font-size: 1.2em;
+                padding: 1em 0 2em 0;
+            }
+            .list-canciones {
+                ol {
+                    font-size: 1em;
+                    width: 100%;
+                    margin-left: -2em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                li {
+                    width: 100%;
+                }
+                }
+            }
+        }
+
+        //Tour
+        #section-tour-mapa {
+            h2 {
+                font-size: 1.7em;
+                padding-bottom: 0.5em;
+            }
+            h2, p {
+                text-align: center;
+            }
+            div h3{
+                font-size: 1.5em;
+                padding: 1em 0;
+            }
+            #grid-tour {
+                iframe {
+                    border: none;
+                    width: 100%; // toda la pantalla
+                    height: 30em;
+                }
+                img {
+                    width: 100%;
+                    height: 20em;
+                }
+            }
+        }
+
     }
-    #form-div {
-        width: 60vh;
-    }
+
+    #main-contacto {
+        h2, p {
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.7em;
+            padding-top: 2em;
+        }
+        p {
+            font-size: 1.2em;
+            padding: 0.5em;
+        }
+        #form-div {
+            textarea {
+                height: 10em;
+            }
+            .form-datos {
+                width: 100%;
+            }
+            div {
+                font-size: 1em;
+                text-align: center;
+            }
+            #btn-form {
+                font-size: 1.2em;
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
+            form {
+                padding-bottom: 1.8em;
+            }
+        }
+    } 
 }
 }
