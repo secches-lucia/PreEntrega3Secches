@@ -5,7 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	list-style-type: none;
-	font-family: 'Roboto', sans-serif;
+	font-family: $font-family;
 }
 html, body {
 	height: 100%;
@@ -14,7 +14,7 @@ body {
 	display: flex;
 	flex-direction: column;
     header {
-	    background-color: $background-color_1;
+	    background-color: $background-color-1;
 	    h1 {
 		    color: $text-color-3;
 		    font-size: 1.7em;
@@ -22,7 +22,7 @@ body {
 	    }
     }
     main {
-	    background-color: $background-color_3;
+	    background-color: $background-color-3;
 	    flex: 1 0 auto;
 	    display: flex;
 	    align-items: center;
