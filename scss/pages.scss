@@ -1,4 +1,4 @@
-@import "utilidades/variables";
+@import "../scss/utilidades/variables.scss";
 
 * {
     margin: 0;
@@ -158,7 +158,7 @@ body {
 }
 
 // Responsive DESKTOP
-@media only screen and (min-width: 933px) {
+@media only screen and (min-width: 1200px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -181,6 +181,11 @@ body {
             }
         }
     }
+    main {
+        padding: 0 10em;
+    }
+
+    // Sobre Wolf
         #section-introduccion{
             display: flex;
             justify-content: space-between;
@@ -189,7 +194,7 @@ body {
             #text-introduccion {
                 color: #4b356d;
                 width: 100%;
-                margin: 0 1em 0 0em;
+                margin-right: 1em;
                 padding: 3em 3em 0 2em;
                 h2 {
                     font-size: 2.5em;
@@ -202,6 +207,7 @@ body {
             }
             img{
                 width: 90%;
+                padding-bottom: 2em;
             }
         }
         #section-cita {
@@ -235,11 +241,13 @@ body {
                 font-size: 1.25em;
             }
         }
-        
+
+        // Discografía
         #section-titulo-discografia {
             margin: 2em;
         }
-        
+        .section-discografia {
+        }
         .section-discografia h4 {
             text-align: center;
             padding: 2em;
@@ -313,7 +321,7 @@ body {
 }
 
 // Responsive TABLET
-@media only screen and (min-width: 600px) and (max-width: 932px) {
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -340,55 +348,54 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 2em 1em 1em 1em;
+        margin: 2em;
         font-size: 1.2em;
         #text-introduccion {
-            color: #4b356d;
+            color: $text-color-1;
             width: 100%;
-            margin: 0 1em 0 0em;
-            padding: 2em 2em 0 1em;
+            padding: 2em;
             h2 {
                 font-size: 2em;
-                padding-bottom: 0.8em;
+                padding-bottom: 1em;
             }
             p {
                 text-align: justify;
-                font-size: 1em;
+                font-size: 1.2em;
             }
         }
         img {
-            width: 80%;
+            width: 100%;
         }
     }
     #section-cita {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        color: #c2bacf;
-        background-color: #644791;
-        font-size: 1.1em;
+        color: $text-color-3;
+        background-color: $background-color-2;
         img {
-            width: 70%;
+            width: 30%;
+            margin: 0 auto;
+            display: block;
+            padding-top: 2em;
         }
         blockquote {
-            font-size: 1.1em;
+            font-size: 1.5em;
             text-align: center;
             font-style: italic;
-            padding: 1em 1.5em;
-            width: 80%;
+            padding: 2em 4em;
+            width: 100%;
         }
     }
     #section-biografia {
         display: flex;
         flex-direction: column;
-        gap: 3em;
+        gap: 1em;
         justify-content: center;
-        margin: 0 1em;
-        padding: 1.5em;
+        margin: 2em;
+        padding: 2em;
         p {
-            margin: 1em 2em;
             text-align: justify;
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
     }
     #section-titulo-discografia {
