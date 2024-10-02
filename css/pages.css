@@ -20,15 +20,15 @@ body header {
 body header a {
   text-decoration: none;
 }
+body header a:hover {
+  color: #e3daf0;
+  transition: ease-in 0.2s;
+}
 body header h1, body header a {
   color: #c2bacf;
 }
 body header nav span {
   text-decoration: underline;
-}
-body header a:hover {
-  color: #d7c5f3;
-  transition: ease-in 0.2s;
 }
 body main {
   background-color: #c2bacf;
@@ -75,10 +75,10 @@ body main .section-discografia .list-canciones li {
 }
 body main .section-discografia .list-canciones li:nth-child(odd) {
   background-color: #644791;
-  color: #c2bacf;
+  color: #e3daf0;
 }
 body main .section-discografia .list-canciones li:nth-child(even) {
-  background-color: #c2bacf;
+  background-color: #e3daf0;
   color: #644791;
 }
 body main #section-tour-mapa {
@@ -118,6 +118,7 @@ body main #form-container #form-div label a {
   color: #1f014d;
 }
 body main #form-container #form-div input, body main #form-container #form-div textarea {
+  background-color: #e3daf0;
   border: 5px solid rgba(0, 0, 0, 0);
 }
 body main #form-container #form-div #btn-form {

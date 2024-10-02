@@ -26,7 +26,7 @@ body {
 	    flex: 1 0 auto;
 	    display: flex;
 	    align-items: center;
-	    padding: 3em 0 3em 0;
+	    padding: 3em 0;
         h2{
             color: $text-color-1;
             font-size: 2em;
@@ -39,14 +39,14 @@ body {
 	    }
         .grid-item {
 		    justify-content: center;
-	    	padding: 7% 0 7% 0;
+	    	padding: 7% 0;
 	    	background-repeat: no-repeat;
 	    	cursor: pointer;
 	    	border-radius: $border-radius;
 	    	width: 100%;
 	    	position: relative;
 	    	overflow: hidden;
-	    	background-image: url('../img/img-home.jpg');
+	    	background-image: url('../img/img-home.webp');
 	    	&::before {
 	    		content: '';
 	    		position: absolute;
@@ -84,7 +84,7 @@ body {
 		column-gap: 3em;
 		text-align: center;
 		width: 100%;
-		margin: 0 10% 0 10%;
+		margin: 0 10%;
 		color: $text-color-1;
 	}
 }

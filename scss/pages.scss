@@ -71,12 +71,12 @@ body {
                     justify-content: space-between;
                 }
                 li:nth-child(odd){
-                    background-color: #644791;
-                    color: #c2bacf;
+                    background-color: $background-color-2;
+                    color: $text-color-5;
                 }
                 li:nth-child(even){
-                    background-color: #c2bacf;
-                    color: #644791;
+                    background-color: $background-color-4;
+                    color: $text-color-2;
                 }
             }
         }
@@ -115,6 +115,7 @@ body {
                 }
             }
             input, textarea {
+                background-color: $text-color-5;
                 border: 5px solid #00000000; // 0% de opacidad;
             }                 
             #btn-form {
