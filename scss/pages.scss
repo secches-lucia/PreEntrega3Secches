@@ -37,6 +37,12 @@ body {
         p {
             line-height: 220%;
         }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
         #section-biografia, .section-discografia h3, .section-discografia h4, .section-discografia p, .section-titulo, .section-titulo + p, #section-tour-mapa h3 {
             color: $text-color-1;
         }

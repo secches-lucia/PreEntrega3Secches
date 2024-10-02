@@ -38,6 +38,12 @@ body main {
 body main p {
   line-height: 220%;
 }
+body main .bold {
+  font-weight: bold;
+}
+body main .italic {
+  font-style: italic;
+}
 body main #section-biografia, body main .section-discografia h3, body main .section-discografia h4, body main .section-discografia p, body main .section-titulo, body main .section-titulo + p, body main #section-tour-mapa h3 {
   color: #4b356d;
 }
