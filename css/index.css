@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  background-color: #4b356d;
+}
+body header h1 {
+  color: #c2bacf;
+  font-size: 1.7em;
+  margin: 1em;
+}
+body main {
+  background-color: #c2bacf;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 3em 0 3em 0;
+}
+body main h2 {
+  color: #4b356d;
+  font-size: 2em;
+}
+body main a {
+  color: #c2bacf;
+  text-decoration: none;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+body main .grid-item {
+  justify-content: center;
+  padding: 7% 0 7% 0;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../img/img-home.jpg");
+}
+body main .grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+body main .grid-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+body main .grid-item > * {
+  position: relative;
+  z-index: 2;
+}
+body footer {
+  color: #383838;
+  background-color: #dbdbdb;
+}
+
+@media only screen and (min-width: 933px) {
+  .grid-navegacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3em;
+    column-gap: 3em;
+    text-align: center;
+    width: 100%;
+    margin: 0 10% 0 10%;
+    color: #4b356d;
+  }
+}
+@media only screen and (max-width: 932px) {
+  .grid-navegacion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

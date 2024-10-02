@@ -1,0 +1,102 @@
+@import "utilidades/variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	font-family: 'Roboto', sans-serif;
+}
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+    header {
+	    background-color: $background-color_1;
+	    h1 {
+		    color: $text-color-3;
+		    font-size: 1.7em;
+		    margin: 1em;
+	    }
+    }
+    main {
+	    background-color: $background-color_3;
+	    flex: 1 0 auto;
+	    display: flex;
+	    align-items: center;
+	    padding: 3em 0 3em 0;
+        h2{
+            color: $text-color-1;
+            font-size: 2em;
+        }
+	    a {
+		    color: $text-color-3;
+		    text-decoration: none;
+		    font-size: 1.7em;
+		    font-weight: bold;
+	    }
+        .grid-item {
+		    justify-content: center;
+	    	padding: 7% 0 7% 0;
+	    	background-repeat: no-repeat;
+	    	cursor: pointer;
+	    	border-radius: $border-radius;
+	    	width: 100%;
+	    	position: relative;
+	    	overflow: hidden;
+	    	background-image: url('../img/img-home.jpg');
+	    	&::before {
+	    		content: '';
+	    		position: absolute;
+	    		top: 0;
+	    		left: 0;
+	    		width: 100%;
+	    		height: 100%;
+	    		background-color: #00000000;
+	    		transition: background-color 0.3s ease;
+	    		z-index: 1;
+	    	}
+	    	&:hover {
+	    		&::before {
+	    			background-color: #00000080;
+	    		}
+		    }
+		    >* {
+			position: relative;
+			z-index: 2;
+		    }
+	    }
+    }
+    footer {
+        color: $footer-text-color;
+        background-color: $footer-background-color;
+    }
+}
+
+// Responsive DESKTOP
+@media only screen and (min-width: 933px) {
+	.grid-navegacion {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 3em;
+		column-gap: 3em;
+		text-align: center;
+		width: 100%;
+		margin: 0 10% 0 10%;
+		color: $text-color-1;
+	}
+}
+
+// Responsive MOBILE
+@media only screen and (max-width: 932px) {
+	.grid-navegacion {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1em;
+		text-align: center;
+		margin: 0 auto;
+		width: 90%;
+	}
+}
