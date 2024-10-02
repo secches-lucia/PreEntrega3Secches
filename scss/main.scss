@@ -1,4 +1,5 @@
 @import "utilidades/variables";
+@import "utilidades/mixin";
 
 * {
 	margin: 0;
@@ -8,7 +9,7 @@
 	font-family: $font-family;
 }
 html, body {
-	height: 100%;
+	@include medidas(100%, 100%);
 }
 body {
 	display: flex;
@@ -34,7 +35,6 @@ body {
 	    a {
 		    color: $text-color-3;
 		    text-decoration: none;
-		    font-size: 1.7em;
 		    font-weight: bold;
 	    }
         .grid-item {
@@ -43,7 +43,7 @@ body {
 	    	background-repeat: no-repeat;
 	    	cursor: pointer;
 	    	border-radius: $border-radius;
-	    	width: 100%;
+	    	@include medidas(100%, 100%);
 	    	position: relative;
 	    	overflow: hidden;
 	    	background-image: url('../img/img-home.webp');
@@ -52,8 +52,7 @@ body {
 	    		position: absolute;
 	    		top: 0;
 	    		left: 0;
-	    		width: 100%;
-	    		height: 100%;
+	    		@include medidas(100%, 100%);
 	    		background-color: #00000000;
 	    		transition: background-color 0.3s ease;
 	    		z-index: 1;
@@ -83,20 +82,41 @@ body {
 		row-gap: 3em;
 		column-gap: 3em;
 		text-align: center;
-		width: 100%;
+		@include medidas(100%, 100%);
 		margin: 0 10%;
 		color: $text-color-1;
+		a {
+			font-size: 1.7em;
+		}
 	}
 }
 
-// Responsive MOBILE
-@media only screen and (max-width: 932px) {
+// Resposive TABLET
+@media only screen and (min-width: 768px) {
 	.grid-navegacion {
 		display: flex;
 		flex-direction: column;
 		row-gap: 1em;
 		text-align: center;
 		margin: 0 auto;
-		width: 90%;
+		@include medidas(90%, 100%);
+		a {
+			font-size: 2em;
+		}
+	}
+}
+
+// Responsive MOBILE
+@media only screen and (max-width: 767px) {
+	.grid-navegacion {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1em;
+		text-align: center;
+		margin: 0 auto;
+		@include medidas(90%, 100%);
+		a {
+			font-size: 1.3em;
+		}
 	}
 }
