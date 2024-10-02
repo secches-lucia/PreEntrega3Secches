@@ -6,7 +6,6 @@
     box-sizing: border-box;
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
-}
 html, body {
     height: 100%;
 }
@@ -147,10 +146,14 @@ body {
             margin-top: 1em;
         }
     }
+    footer {
+        color: $footer-text-color;
+        background-color: $footer-background-color;
+        }
 }
 
+// Responsive DESKTOP
 @media only screen and (min-width: 933px) {
-
     header {
         display: flex;
         justify-content: space-between;
@@ -166,20 +169,17 @@ body {
                 display: flex;
                 gap: 2em;
                 padding: 1em 1em 0 0;
-            }
-                
-            li {
-                font-size: 1.1em;
-                text-align: center;
-            }
-                
+                li {
+                    font-size: 1.1em;
+                    text-align: center;
+                }
+            }            
             a:hover {
                 color: #d7c5f3;
                 transition: ease-in 0.2s;
             }
         }
     }
-    main {
         #section-introduccion{
             display: flex;
             justify-content: space-between;
@@ -308,215 +308,190 @@ body {
         
         #form-div {
             width: 70vh;
-        }
+        }    
+    }
+
+
+
+// Responsive TABLET
+@media only screen and (min-width: 601px) and (max-width: 932px) {
         
-        }
-        
-        @media only screen and (min-width: 601px) and (max-width: 932px) {
-        
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                h1 {
-                    font-size: 1.5em;
-                }
-                nav {
-                    ul {
-                        display: flex;
-                        gap: 1.5em;
-                        padding: 1em 1em 0 0;
-                        li {
-                            font-size: 1em;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-        
-            #section-introduccion {
-                display: flex;
-                flex-direction: column;
-                margin: 1em 1em 0 1em;
-                padding: 2em;
-                #text-introduccion {
-                    color: #4b356d;
-                    width: 100%;
-                    margin: 0 1em 0 0em;
-                    padding: 3em 3em 2em 2em;
-                    h2 {
-                        font-size: 2em;
-                        padding-bottom: 1em;
-                    }
-                    p {
-                        text-align: justify;
-                    }
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-            #section-cita {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                color: #c2bacf;
-                background-color: #644791;
-                width: 100%;
-            }
-        
-            blockquote {
-                font-size: 1.1em;
-                text-align: right;
-                font-style: italic;
-                padding: 1.5em;
-                width: 90%;
-            }
-        
-            #section-biografia {
-                display: flex;
-                flex-direction: column;
-                text-align: justify;
-                padding: 2em;
-            }
-        
-            #section-biografia img {
-                width: 100%;
-                margin: 0 auto;
-            }
-        
-            #section-cita img {
-                width: 100%;
-                margin: -1px;
-            }
-        
-            #section-biografia {
-                display: flex;
-                flex-direction: column;
-                text-align: justify;
-                padding: 2em;
-            }
-        
-        
-        #section-cita blockquote {
-            font-size: 1.1em;
-            padding: 1.5em;
-        }
-        
-        #section-titulo-discografia {
-            margin: 2em 2em 2em 2em;
-        }
-        
-        #section-tour-mapa div h3 {
-            font-size: 3em;
-            padding: 1em 0 1em 0;
-        }
-        
-        #form-main{
-            width:100%;
-        }
-        
-        textarea {
-            width: 50%;
-            height: 200%;
-        }
-        
-        .form-datos {
-            line-height: 1em;
-            background-color: white;
-            padding: 0.2em;
-            width:100%;
-            border: 3px solid rgba(0, 0, 0, 0);
-        }
-        
-        }
-        
-        @media only screen and (max-width: 600px) {
-        
-        header {
-            display: flex;
-            flex-direction: row;
-            align-items: right;
-        }
-        
-        header h1 {
-            font-size: 1.2em;
-        }
-        
-        nav {
-            margin-left: auto;
-        }
-        
-        nav ul {
-            display: grid;
-            grid-template-rows: repeat(2, auto);
-            gap: 10px;
-        }
-        
-        nav li {
-            font-size: 1.2em;
-            text-align: right;
-        }
-        
-        .section-titulo h2 {
-            color: #4b356d;
-            text-align: center;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
             font-size: 1.5em;
-            padding-bottom: 2em;
         }
-        
-        #section-introduccion {
-            display: flex;
-            flex-direction: column;
-            margin: 3em 1em 0 1em;
-            padding: 2em;
-            text-align: justify;
+        nav {
+            ul {
+                display: flex;
+                gap: 1.5em;
+                padding: 1em 1em 0 0;
+                li {
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
         }
-        
-        #img-introduccion img {
+    }
+    #section-introduccion {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 1em 0 1em;
+        padding: 2em;
+        #text-introduccion {
+            color: #4b356d;
             width: 100%;
+            margin: 0 1em 0 0em;
+            padding: 3em 3em 2em 2em;
+            h2 {
+                font-size: 2em;
+                padding-bottom: 1em;
+            }
+            p {
+                text-align: justify;
+            }
+            img {
+                width: 100%;
+            }
         }
-        
-        #section-cita {
-            display: flex;
-            flex-direction: column;
-            color: #c2bacf;
-            background-color: #644791;
-        }
-        
-        blockquote {
-            font-size: 1em;
-            text-align: justify;
-            align-items: center;
-            font-style: italic;
-            padding: 2em;
-            width: 90%;
-        }
-        
-        #section-cita img {
+    }
+    #section-cita {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #c2bacf;
+        background-color: #644791;
+        width: 100%;
+        img {
             width: 100%;
             margin: -1px;
         }
-        
-        #section-biografia {
-            display: flex;
-            flex-direction: column;
-            text-align: justify;
-            padding: 2em;
+        blockquote {
+            font-size: 1.1em;
+            text-align: right;
+            font-style: italic;
+            padding: 1.5em;
+            width: 90%;
         }
-        
-        #section-titulo-discografia {
-            margin: 2em 2em 0em 2em;
-        }
-        
-        #section-tour-mapa div h3 {
-            font-size: 1.7em;
-            padding: 2em 0 2em 0;
-        }
-        }
+    }
+
+    #section-biografia {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 2em;
+    }
+
+    #section-titulo-discografia {
+        margin: 2em 2em 2em 2em;
+    }
+
+    #section-tour-mapa div h3 {
+        font-size: 3em;
+        padding: 1em 0 1em 0;
+    }
+
+    #form-main{
+        width:100%;
+    }
+
+    textarea {
+        width: 50%;
+        height: 200%;
+    }
+
+    .form-datos {
+        line-height: 1em;
+        background-color: white;
+        padding: 0.2em;
+        width:100%;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }   
 }
 
-footer {
-    color: $footer-text-color;
-    background-color: $footer-background-color;
+
+
+// Responsive MOBILE
+@media only screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }  
+    nav {
+        margin-left: auto;
+    }
+    
+    nav ul {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+    }
+    
+    nav li {
+        font-size: 1.2em;
+        text-align: right;
+    }
+    
+    .section-titulo h2 {
+        color: #4b356d;
+        text-align: center;
+        font-size: 1.5em;
+        padding-bottom: 2em;
+    }
+    
+    #section-introduccion {
+        display: flex;
+        flex-direction: column;
+        margin: 3em 1em 0 1em;
+        padding: 2em;
+        text-align: justify;
+    }
+    
+    #img-introduccion img {
+        width: 100%;
+    }
+    
+    #section-cita {
+        display: flex;
+        flex-direction: column;
+        color: #c2bacf;
+        background-color: #644791;
+    }
+    
+    blockquote {
+        font-size: 1em;
+        text-align: justify;
+        align-items: center;
+        font-style: italic;
+        padding: 2em;
+        width: 90%;
+    }
+    
+    #section-cita img {
+        width: 100%;
+        margin: -1px;
+    }
+    
+    #section-biografia {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 2em;
+    }
+    
+    #section-titulo-discografia {
+        margin: 2em 2em 0em 2em;
+    }
+    
+    #section-tour-mapa div h3 {
+        font-size: 1.7em;
+        padding: 2em 0 2em 0;
+    }
+}
 }
