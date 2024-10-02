@@ -1,4 +1,5 @@
 @import "../scss/utilidades/variables.scss";
+@import "../scss/utilidades/mixin.scss";
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
     font-family: $font-family;
 }
 html, body {
-    height: 100%;
+    @include medidas(100%, 100%);
 }
 
 body {
@@ -20,7 +21,7 @@ body {
             text-decoration: none;
         }
         a:hover {
-            color: #e3daf0;
+            color: $background-color-4;
             transition: ease-in 0.2s;
         }
         h1, a {
@@ -53,7 +54,7 @@ body {
         .section-discografia {
             padding-bottom: 3em;
             img{
-                width: 100%;
+                @include medidas(100%, 100%);
             }
             div + div {
                 display: flex;
@@ -70,7 +71,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 100%;
+                @include medidas(100%, 100%);
                 li{
                     padding: 1em;
                     display: flex;
@@ -109,7 +110,7 @@ body {
         }
     }
     #form-container {
-        width: 100%;
+        @include medidas(100%, 100%);
         #form-div {
             background-color: #6547914d; // 30% de opacidad - $background-color-2
             padding: 2em;
@@ -177,7 +178,7 @@ footer {
             font-size: 1.3em;
             padding-bottom: 2em;
             #text-introduccion {
-                width: 100%;
+                @include medidas(100%, 100%);
                 margin-right: 1em;
                 h2 {
                     margin: 2em 1em 0 0em;
@@ -191,7 +192,7 @@ footer {
             }
             img{
                 margin: 5em 1em 0 2em;
-                width: 100%;
+                @include medidas(95%, auto);
                 padding-bottom: 2em;
             }
         }
@@ -201,7 +202,7 @@ footer {
             align-items: center;
             font-size: 1.2em;
             img {
-                width: 100%;
+                @include medidas(100%, 100%);
                 padding: 1em;
             }
             blockquote {
@@ -209,7 +210,7 @@ footer {
                 text-align: center;
                 font-style: italic;
                 padding: 1em 2em;
-                width: 90%;
+                @include medidas(90%, 100%);
             }
         } 
         #section-biografia {
@@ -239,12 +240,9 @@ footer {
                 padding: 1em 0em 2em 0;
                 font-size: 1.7em;
             }
-            .list-canciones ol {
-                font-size: 1.2em;
-                li{
-                    padding: 1em;
-                    width: 100vh;
-                }
+            li {
+                padding: 1em;
+                @include medidas(100vh, auto);
             }
         }
         #section-tour-mapa {
@@ -266,12 +264,10 @@ footer {
                 margin: 2em;
                 iframe{
                     border: none;
-                    width: 100%;
-                    height: 100%;
+                    @include medidas(100%, 100%);
                 }
                 img{
-                    width: 100%;
-                    height: 100%;
+                    @include medidas(100%, 100%);
                 }
             }
         }
@@ -288,21 +284,21 @@ footer {
             padding-bottom: 1em;
         }
         #form-div {
-            width: 100vh;
+            @include medidas(100vh, auto);
             p {
                 font-size:  1em;       
             }
             .form-datos {
                line-height: 150%;
                 padding: 0.2em;
-                width:100%;
+                @include medidas(100%, 100%);;
                 textarea {
-                    width: 100%;
+                    @include medidas(100%, 100%);
                     line-height: 150%;
                 }
             }
             #btn-form {
-                width: 100%;
+                @include medidas(100%, 100%);
                 font-size: 1.3em;
             }
         }
@@ -343,7 +339,7 @@ footer {
         font-size: 1.2em;
         #text-introduccion {
             color: $text-color-1;
-            width: 100%;
+            @include medidas(100%, 100%);
             padding: 2em;
             h2 {
                 font-size: 2em;
@@ -355,14 +351,14 @@ footer {
             }
         }
         img {
-            width: 100%;
+            @include medidas(100%, 100%);
         }
     }
     #section-cita {
         display: flex;
         flex-direction: column;
         img {
-            width: 30%;
+            @include medidas(30%, 100%);
             margin: 0 auto;
             display: block;
             padding-top: 2em;
@@ -372,7 +368,7 @@ footer {
             text-align: center;
             font-style: italic;
             padding: 2em 4em;
-            width: 100%;
+            @include medidas(100%, 100%);
         }
     }
     #section-biografia {
@@ -409,13 +405,13 @@ footer {
         .list-canciones {
             ol {
                 font-size: 1.2em;
-                width: 100%;
+                @include medidas(100%, 100%);
                 margin-left: -2em;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             li {
-                width: 100%;
+                @include medidas(100%, auto);
             }
             }
         }
@@ -445,12 +441,10 @@ footer {
             margin: 2em;
             iframe {
                 border: none;
-                width: 100%;
-                height: 30em;
+                @include medidas(100%, 30em);
             }
             img {
-                width: 100%;
-                height: 100%;
+                @include medidas(100%, 100%);
             }
         }
     }
@@ -469,11 +463,8 @@ footer {
             padding: 0.5em;
         }
         #form-div {
-            textarea {
-                height: 10em;
-            }
             .form-datos {
-                width: 100%;
+                @include medidas(100%, auto);
             }
             div {
                 font-size: 1em;
@@ -481,7 +472,7 @@ footer {
             }
             #btn-form {
                 font-size: 1.2em;
-                width: 70%;
+                @include medidas(70%, 100%);
                 margin: 0 auto;
                 display: block;
             }
@@ -528,14 +519,14 @@ footer {
             padding: 2em;
             text-align: justify;
             img {
-                width: 100%;
+                @include medidas(100%, 100%);
             }
         }
         #section-cita {
             display: flex;
             flex-direction: column;
             img {
-                width: 100%;
+                @include medidas(100%, 100%);
                 padding: 1em;
             }
             blockquote {
@@ -543,7 +534,7 @@ footer {
                 text-align: justify;
                 font-style: italic;
                 padding: 2em;
-                width: 100%;
+                @include medidas(100%, 100%);
             }
         }
         #section-biografia {
@@ -573,7 +564,7 @@ footer {
                 font-size: 1.5em;
             }
             img {
-                width: 100%;
+                @include medidas(100%, 100%);
             }
             h4 {
                 text-align: center;
@@ -583,13 +574,13 @@ footer {
             .list-canciones {
                 ol {
                     font-size: 1em;
-                    width: 100%;
+                    @include medidas(100%, 100%);
                     margin-left: -2em;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 li {
-                    width: 100%;
+                    @include medidas(100%, auto);
                 }
                 }
             }
@@ -611,12 +602,10 @@ footer {
             #grid-tour {
                 iframe {
                     border: none;
-                    width: 100%; // toda la pantalla
-                    height: 30em;
+                    @include medidas(100%, 30em);
                 }
                 img {
-                    width: 100%;
-                    height: 20em;
+                    @include medidas(100%, 20em);
                 }
             }
         }
@@ -632,15 +621,18 @@ footer {
             padding-top: 2em;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             padding: 0.5em;
         }
         #form-div {
+            form {
+                padding-bottom: 1.8em;
+            }
             textarea {
-                height: 10em;
+                @include medidas(100%, 10em);
             }
             .form-datos {
-                width: 100%;
+                @include medidas(100%, auto);
             }
             div {
                 font-size: 1em;
@@ -648,14 +640,10 @@ footer {
             }
             #btn-form {
                 font-size: 1.2em;
-                width: 70%;
+                @include medidas(70%, 100%);
                 margin: 0 auto;
                 display: block;
             }
-            form {
-                padding-bottom: 1.8em;
-            }
         }
     } 
-}
-}
+}}
